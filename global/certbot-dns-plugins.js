@@ -302,4 +302,15 @@ dns_eurodns_apiKey = mysecretpassword
 dns_eurodns_endpoint = https://rest-api.eurodns.com/user-api-gateway/proxy`,
 		full_plugin_name: 'certbot-dns-eurodns:dns-eurodns',
 	},
+	//####################################################//
+	digitalocean: {
+		display_name:     'Dinahosting',
+		package_name:     'certbot-dns-dinahosting',
+		package_version:  '1.0.0',
+		dependencies:     '',
+		credentials:      `certbot_dns_dinahosting:dns_dinahosting_username = "username"
+certbot_dns_dinahosting:dns_dinahosting_password = "password"
+		`,
+		full_plugin_name: 'certbot-dns-dinahosting:dns-dinahosting',
+	},
 };

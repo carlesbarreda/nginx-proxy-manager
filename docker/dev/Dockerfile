@@ -9,6 +9,7 @@ RUN echo "fs.file-max = 65535" > /etc/sysctl.conf \
 	&& apk update \
 	&& apk add python3 certbot jq \
 	&& python3 -m ensurepip \
+	&& pip3 install https://github.com/rdrgzlng/certbot-dns-dinahosting/tarball/master \
 	&& rm -rf /var/cache/apk/*
 
 # Task
