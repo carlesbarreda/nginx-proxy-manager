@@ -1,3 +1,5 @@
+[![Nginx proxy manager images CI](https://github.com/carlesbarreda/nginx-proxy-manager/actions/workflows/docker-image.yml/badge.svg)](https://github.com/carlesbarreda/nginx-proxy-manager/actions/workflows/docker-image.yml)
+
 <p align="center">
 	<img src="https://nginxproxymanager.com/github.png">
 	<br><br>
