@@ -38,4 +38,4 @@ jobs:
             --tag carlesbarreda/nginx-proxy-manager:latest \
             --progress=plain \
             --no-cache \
-            --push .
+            --push
