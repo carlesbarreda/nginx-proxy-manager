@@ -303,7 +303,7 @@ dns_eurodns_endpoint = https://rest-api.eurodns.com/user-api-gateway/proxy`,
 		full_plugin_name: 'certbot-dns-eurodns:dns-eurodns',
 	},
 	//####################################################//
-	digitalocean: {
+	dinahosting: {
 		display_name:     'Dinahosting',
 		package_name:     'certbot-dns-dinahosting',
 		package_version:  '1.0.0',
