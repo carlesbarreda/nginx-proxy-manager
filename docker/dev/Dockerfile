@@ -6,11 +6,9 @@ ENV SUPPRESS_NO_CONFIG_WARNING=1
 ENV S6_FIX_ATTRS_HIDDEN=1
 
 RUN echo "fs.file-max = 65535" > /etc/sysctl.conf \
-	&& apk update \
-	&& apk add python3 certbot jq \
+	&& apk add --no-cache python3=~3 certbot=~1 jq=~1 \
 	&& python3 -m ensurepip \
-	&& pip3 install git+https://github.com/rdrgzlng/certbot-dns-dinahosting.git@master \
-	&& rm -rf /var/cache/apk/*
+	&& pip3 install git+https://github.com/rdrgzlng/certbot-dns-dinahosting.git@master
 
 # Task
 RUN cd /usr \

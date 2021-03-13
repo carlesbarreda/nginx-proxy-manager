@@ -55,7 +55,7 @@ jobs:
             --tag $IMAGE_NAME:latest \
             --progress=plain \
             --no-cache \
-            --push
+            --load
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
