@@ -17,9 +17,11 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=1
 ENV NODE_ENV=production
 
 RUN echo "fs.file-max = 65535" > /etc/sysctl.conf \
-	&& apk add --no-cache python3=~3 certbot=~1 jq=~1 \
+	&& apk update \
+	&& apk add python3=~3 certbot=~1 jq=~1 \
 	&& python3 -m ensurepip \
-	&& pip3 install git+https://github.com/rdrgzlng/certbot-dns-dinahosting.git@master
+	&& pip3 install git+https://github.com/rdrgzlng/certbot-dns-dinahosting.git@master \
+	&& rm -rf /var/cache/apk/*
 
 ENV NPM_BUILD_VERSION="${BUILD_VERSION}" NPM_BUILD_COMMIT="${BUILD_COMMIT}" NPM_BUILD_DATE="${BUILD_DATE}"
 
